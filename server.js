@@ -26,7 +26,7 @@ app.get("/about", (req, res) => {
 });
 
 mongoose
-    .connect(process.env.MONGO_URI)
+    .connect('mongodb://127.0.0.1:27017/portfolio')
     .then(() => {
         app.listen(PORT , () =>
         {
